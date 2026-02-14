@@ -28,6 +28,8 @@ def printchapt(app):
         selecchap = None
 
     selecchap = ctk.CTkScrollableFrame(app)
+    capLabel = ctk.CTkLabel(selecchap,text="Capitulos")
+    capLabel.pack()
     for capitulos in bibliaNaa[glob_livros]:
         ctk.CTkButton(selecchap,text=capitulos, command=lambda c=capitulos:retornarLocal(c, glob_livros)).pack()
     selecchap.pack()
@@ -39,6 +41,8 @@ def currentBook(livros):
 
 def menuSelect(app):
     selectbook = ctk.CTkScrollableFrame(app)
+    livroLabel = ctk.CTkLabel(selectbook,text="Livros")
+    livroLabel.pack()
     for livros in bibliaNaa:
         ctk.CTkButton(selectbook,text=livros, command=lambda l=livros:currentBook(l)).pack()
     selectbook.pack()
