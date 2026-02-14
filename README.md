@@ -31,7 +31,7 @@ Antes de rodar o projeto, você precisará de:
 
 ## Uso
 
-Execute o programa:
+Na pasta app/ execute o programa:
 python main.py
 
 - A interface permite selecionar capítulos e livros da Bíblia.
