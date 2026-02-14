@@ -1,0 +1,3 @@
+BACKGROUND = '#1c1c1c'
+FRAMES = '#0f2530'
+BUTTON = '#0f2530'
