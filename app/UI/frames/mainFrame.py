@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from .colors.colors import BACKGROUND
+from .colors.colors import *
 
 from UI.frames.geminiHolder import GeminiHolder
 from UI.frames.leftFrame import leftFrame

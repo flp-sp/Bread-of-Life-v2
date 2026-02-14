@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from .colors.colors import FRAMES
+from .colors.colors import *
 from ..frames.widgets.pickLocation import menuSelect, set_app
 
 def leftFrame(app):

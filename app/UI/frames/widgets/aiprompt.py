@@ -2,6 +2,7 @@ import customtkinter as ctk
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+from ..colors.colors import *
 import os
 
 load_dotenv()
@@ -21,20 +22,20 @@ def callGemini(prompt):
     
 
 def inputFrame(app):
-    inFrame = ctk.CTkFrame(app)
+    inFrame = ctk.CTkFrame(app,fg_color=BACKGROUND)
     inFrame.pack(side='left',expand=True, fill='x')
 
     inLabel = ctk.CTkLabel(inFrame, text="Pergunte a IA:")
     inLabel.pack()
-    inText = ctk.CTkTextbox(inFrame)
-    inText.pack(fill='x',expand=True)
-    inButton = ctk.CTkButton(inFrame, text='>',command=lambda: callGemini(inText.get('1.0','end')))
-    inButton.pack(side='right')
+    inText = ctk.CTkTextbox(inFrame,fg_color=FRAMES)
+    inText.pack(fill='x',expand=True,padx=4,pady=4)
+    inButton = ctk.CTkButton(inFrame, text='>',command=lambda: callGemini(inText.get('1.0','end')),fg_color=BUTTON)
+    inButton.pack(side='right',padx=4,pady=4)
 
 def outputFrame(app):
-    outFrame = ctk.CTkFrame(app)
+    outFrame = ctk.CTkFrame(app,fg_color=BACKGROUND)
     outFrame.pack(side='left',expand=True, fill='both')
     
     global outText
-    outText = ctk.CTkTextbox(outFrame)
-    outText.pack(fill='both',expand=True)
+    outText = ctk.CTkTextbox(outFrame,fg_color=FRAMES)
+    outText.pack(fill='both',expand=True,padx=4,pady=4)

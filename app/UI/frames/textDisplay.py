@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from ..parser.parser import parseBible
+from .colors.colors import *
 
 bibliaNaa = parseBible('../src/PortugueseNAABible.xml')
 bibliaKj = parseBible('../src/EnglishKJBible.xml')
@@ -32,7 +33,7 @@ def retornarLocal(cap, liv):
 
 def menuBiblia(master):
     global textoNaa, textoKj, menuBibliaRef
-    menuBibliaRef = ctk.CTkTabview(master)
+    menuBibliaRef = ctk.CTkTabview(master,fg_color=FRAMES,segmented_button_fg_color=FRAMES,segmented_button_selected_color=BUTTON)
     menuBibliaRef.pack(padx=5, pady=5, fill='both', expand=True)
 
     kjv = menuBibliaRef.add("King James")
@@ -40,11 +41,11 @@ def menuBiblia(master):
     menuBibliaRef.set("Nova Almeida")
 
     # cria os textboxes inicialmente com o primeiro livro/capítulo
-    textoNaa = ctk.CTkTextbox(naa, height=1000, activate_scrollbars=False)
+    textoNaa = ctk.CTkTextbox(naa, height=1000, activate_scrollbars=False,fg_color=FRAMES)
     textoNaa.pack(fill='both', expand=True)
     atualizarTextoNaa('1', '1')
 
-    textoKj = ctk.CTkTextbox(kjv, height=1000, activate_scrollbars=False)
+    textoKj = ctk.CTkTextbox(kjv, height=1000, activate_scrollbars=False,fg_color=FRAMES)
     textoKj.pack(fill='both', expand=True)
     atualizarTextoKj('1', '1')
     
