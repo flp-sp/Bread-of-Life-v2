@@ -3,8 +3,7 @@ from ..colors.colors import *
 from ...parser.parser import parseBible
 from ..textDisplay import retornarLocal
 
-bibliaNaa = parseBible('../src/PortugueseNAABible.xml')
-#bibliaKj = parseBible('../src/EnglishKJBible.xml')
+bibliaNaa = parseBible('UI/frames/src/PortugueseNAABible.xml')
 
 global glob_livros
 glob_livros = '1'

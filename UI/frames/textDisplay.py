@@ -2,8 +2,8 @@ import customtkinter as ctk
 from ..parser.parser import parseBible
 from .colors.colors import *
 
-bibliaNaa = parseBible('../src/PortugueseNAABible.xml')
-bibliaKj = parseBible('../src/EnglishKJBible.xml')
+bibliaNaa = parseBible('UI/frames/src/PortugueseNAABible.xml')
+bibliaKj = parseBible('UI/frames/src/EnglishKJBible.xml')
 
 def atualizarTextoNaa(livro, cap):
     global textoNaa
